@@ -1,103 +1,66 @@
-Secure File System
+# Secure File System
+A security-focused file management system implementing encryption, authentication, and role-based access control (RBAC).
 
-Overview
+## Overview
+Secure File System enhances file security by providing encryption, user authentication, and controlled access based on user roles. The system ensures that only authorized users can encrypt and decrypt files, protecting sensitive data from unauthorized access.
 
-This project is a C++ Secure File System that allows users to encrypt and decrypt files with user authentication and role-based access control (RBAC). It ensures that only authorized users can access sensitive information.
+## About
+Secure File System is a C++ project designed to safeguard files through encryption and access control mechanisms. It enables users to:
+- Encrypt and decrypt files using Caesar cipher encryption.
+- Authenticate users securely with hashed passwords.
+- Implement Role-Based Access Control (RBAC), where only admins can encrypt files, while regular users can only decrypt.
 
-Features
+## Features
+✅ **File Encryption & Decryption** (Caesar Cipher-based security)
+✅ **User Authentication** (Hashed passwords for security)
+✅ **Role-Based Access Control** (Admins can encrypt, users can decrypt)
+✅ **Command-Line Interface** (Simple and easy to use)
 
-✅ File Encryption & Decryption
+## Getting Started
+### Clone the Repository
+```sh
+git clone https://github.com/iamarshalrejith/Secure-FileSystem.git
+cd Secure-FileSystem
+```
 
-Uses a Caesar Cipher (shift-based encryption) to protect files.
+### Compile the Project
+Ensure you have a C++ compiler installed (G++ recommended).
+```sh
+g++ -o secure_fs main.cpp encryption.cpp auth.cpp
+```
 
-Converts files into an unreadable format (encryption).
+### Run the Application
+```sh
+./secure_fs
+```
 
-Authorized users can restore them (decryption).
+## Prerequisites
+Ensure you have the following installed:
+- C++ Compiler (GCC/MinGW for Windows, Clang for macOS, etc.)
+- Git (for version control)
 
-✅ User Authentication
+## File Structure
+```
+Secure-FileSystem/
+│── encryption.h      # Encryption function declarations
+│── encryption.cpp    # File encryption & decryption logic
+│── auth.h            # User authentication function declarations
+│── auth.cpp          # User authentication implementation
+│── main.cpp          # Main application logic
+│── user.txt          # Stores registered users (hashed passwords)
+│── sample.txt        # Sample file for testing
+│── LICENSE.txt       # MIT License
+│── readme.md         # Project documentation
+```
 
-Users must register and log in using a username and password.
+## Contributing
+We welcome contributions! Follow these steps:
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-name`.
+3. Make your changes and commit them: `git commit -am 'Add new feature'`.
+4. Push to your fork: `git push origin feature-name`.
+5. Open a Pull Request.
 
-Passwords are securely hashed before storing in user.txt.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
 
-✅ Role-Based Access Control (RBAC)
-
-Admins can encrypt & decrypt files.
-
-Regular users can only decrypt files.
-
-Prevents unauthorized access to important data.
-
-Installation & Setup
-
-Prerequisites
-
-A C++ compiler (G++/MSVC/Clang)
-
-Windows/Linux/MacOS
-
-Steps
-
-Clone the repository:
-
-git clone https://github.com/your-username/Secure-File-System.git
-cd Secure-File-System
-
-Compile the program:
-
-g++ main.cpp encryption.cpp auth.cpp -o SecureFileSystem
-
-Run the program:
-
-./SecureFileSystem
-
-How to Use
-
-Register a User:
-
-Choose 1. Register in the menu.
-
-Enter username, password, and role (admin/user).
-
-Login:
-
-Choose 2. Login and enter your credentials.
-
-Encrypt/Decrypt Files:
-
-Enter a filename and choose 'e' for encryption or 'd' for decryption.
-
-Admins can encrypt & decrypt, regular users can only decrypt.
-
-Code Structure
-
-Secure-File-System/
-│── encryption.h       # Encryption function declarations
-│── encryption.cpp     # Implements Caesar cipher-based encryption
-│── auth.h             # User authentication function declarations
-│── auth.cpp           # Implements user authentication (register/login)
-│── main.cpp           # Main driver program
-│── user.txt           # Stores registered users (hashed passwords)
-│── README.md          # Project documentation (this file)
-
-Security Considerations
-
-Passwords are stored hashed using the C++ <functional> hash function.
-
-Role-based access prevents unauthorized file encryption.
-
-The encryption method is basic (Caesar Cipher) and should be upgraded for real-world security.
-
-Future Improvements
-
-🔹 Implement AES/RSA encryption for better security.
-🔹 Improve user management (password reset, role changes).
-🔹 Use a database instead of a text file for storing user info.
-
-Contributing
-
-Contributions are welcome! Feel free to fork this repository and submit a pull request.
-
-License
-
-This project is licensed under the MIT License.
