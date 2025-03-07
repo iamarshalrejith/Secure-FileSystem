@@ -11,10 +11,11 @@ Secure File System is a C++ project designed to safeguard files through encrypti
 - Implement Role-Based Access Control (RBAC), where only admins can encrypt files, while regular users can only decrypt.
 
 ## Features
-✅ **File Encryption & Decryption** (Caesar Cipher-based security)
-✅ **User Authentication** (Hashed passwords for security)
-✅ **Role-Based Access Control** (Admins can encrypt, users can decrypt)
-✅ **Command-Line Interface** (Simple and easy to use)
+✅ File Encryption & Decryption (Caesar Cipher-based security)  
+✅ User Authentication (Hashed passwords for security)  
+✅ Role-Based Access Control (Admins can encrypt, users can decrypt)  
+✅ Command-Line Interface (Simple and easy to use)  
+
 
 ## Getting Started
 ### Clone the Repository
@@ -62,5 +63,5 @@ We welcome contributions! Follow these steps:
 5. Open a Pull Request.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.txt) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
